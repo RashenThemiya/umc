@@ -1,0 +1,637 @@
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: auto; /* Use overflow property to enable scrolling */
+  max-height: 90vh; /* Limit the height to 90% of the viewport height */
+}
+
+
+h1, h2 {
+  color: #007bff;
+}
+
+.functions {
+  margin-bottom: 20px;
+}
+
+.functions button, .functions a {
+  display: inline-block;
+  padding: 8px 16px;
+  margin-right: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.functions button:hover, .functions a:hover {
+  background-color: #00b38f;
+}
+
+/* Profile form */
+#profileForm {
+  margin-top: 20px;
+}
+
+#profileForm label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+#profileForm input[type="text"],
+#profileForm input[type="time"],
+#profileForm select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#profileForm button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#profileForm button:hover {
+  background-color: #218838;
+}
+
+.hidden {
+  display: none;
+}
+
+
+.section {
+  flex: 1 1 calc(33.33% - 20px);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px; /* Add margin */
+}
+
+.section button {
+  padding: 12px 24px;
+  background-color: #007bff; /* Button color */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.section button:hover {
+  background-color: #0056b3; /* Button color on hover */
+}
+
+
+body {
+background: #89909f;
+padding: 3rem 0 0 3rem;
+font-size: 12px;
+height: 100vh;
+margin: 0;
+overflow: hidden;
+}
+
+.site-wrap {
+display: grid;
+grid-template-columns: 280px 1fr;
+}
+
+.site-nav {
+background: #0b121b;
+color: white;
+border-top-left-radius: 2rem;
+display: flex;
+flex-direction: column;
+
+a {
+  color: inherit;
+}
+
+ul {
+  margin-bottom: auto;
+  li {
+    a {
+      display: block;
+      padding: 0.75rem 0.5rem 0.75rem 2rem;
+      position: relative;
+      &:hover,
+      &:focus {
+        color: #4371c5;
+      }
+    }
+    &.active > a {
+      background: linear-gradient(to right, #101b2d, transparent);
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        background: #4676cd;
+        width: 5px;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+      }
+    }
+  }
+  ul {
+    padding-left: 1rem;
+    margin-bottom: 0.5rem;
+    a {
+      padding-top: 0.4rem;
+      padding-bottom: 0.4rem;
+    }
+  }
+}
+}
+
+.note {
+width: calc(100% - 6rem);
+margin: 2rem;
+background: #171c26;
+border-radius: 10px;
+padding: 1rem;
+h3 {
+  font-size: 0.9rem;
+  margin: 0 0 0.4rem 0;
+}
+p {
+  color: #717783;
+}
+}
+
+.name {
+font-size: 1.3rem;
+position: relative;
+margin: 2rem 0 2rem 0;
+padding: 0 2.5rem 0.5rem 2rem;
+width: calc(100% - 3rem);
+svg {
+  position: absolute;
+  fill: white;
+  width: 16px;
+  height: 16px;
+  right: 0;
+  top: 7px;
+}
+&::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #4777ce;
+  border-radius: 20px;
+  position: absolute;
+  top: 6px;
+  right: -2px;
+}
+}
+
+main {
+border-top-left-radius: 2rem;
+background: #ebecee;
+margin-left: -2rem;
+position: relative;
+> header {
+  padding: 3rem 3rem 0 3rem;
+}
+}
+
+.content-columns {
+padding: 3rem;
+display: flex;
+background: #e5e5e9;
+.col {
+  min-height: 500px;
+  width: 200px;
+  padding: 1rem;
+  background: #ebecee;
+  margin-right: 1rem;
+  box-shadow: 0 0 5px rgba(black, 0.04);
+  border-radius: 5px;
+  &:nth-child(1) {
+    border-top: 4px solid #50aaee;
+  }
+  &:nth-child(2) {
+    border-top: 4px solid #d56ec7;
+  }
+  &:nth-child(3) {
+    border-top: 4px solid #e37e55;
+  }
+  &:nth-child(4) {
+    border-top: 4px solid #ebbd41;
+  }
+}
+}
+
+.item {
+background: white;
+box-shadow: 0 2px 4px rgba(black, 0.07);
+min-height: 50px;
+border-radius: 5px;
+margin: 0 0 0.5rem 0;
+}
+
+.nav-tabs {
+a {
+  margin-right: 2rem;
+  display: inline-block;
+  padding: 1rem 0 1rem 0;
+  font-size: 1.15rem;
+  color: #8c939e;
+  position: relative;
+  &.active {
+    color: #101620;
+    font-weight: 600;
+    span {
+      background: #d9dfea;
+      color: #5887d1;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: #457ace;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+    }
+  }
+  span {
+    border-radius: 10px;
+    font-size: 0.8rem;
+    padding: 0.25rem 0.4rem;
+    font-weight: 600;
+    vertical-align: middle;
+    position: relative;
+    top: -2px;
+    background: #dfe0e2;
+    color: #868d99;
+  }
+}
+}
+
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.toggle-switch input[type="checkbox"] {
+  display: none;
+}
+
+.toggle-switch label {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: background-color 0.4s;
+}
+
+.toggle-switch label:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.4s;
+}
+
+.toggle-switch input[type="checkbox"]:checked + label {
+  background-color: #28a745; /* Green color */
+}
+
+.toggle-switch input[type="checkbox"]:checked + label:before {
+  transform: translateX(26px);
+}
+
+
+#welcomeMessage {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  color: #1465d7;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+#welcomeMessage h1 {
+  font-size: 24px;
+  color: #1a5276; /* Dark blue */
+  font-weight: bold; 
+}
+
+#welcomeMessage p {
+  margin-bottom: 15px;
+  color: #34495e; /* Dark gray */
+}
+
+#searchFormContainer {
+  margin-top: 20px;
+}
+
+#searchFormContainer label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#searchFormContainer input[type="text"] {
+  width: 200px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+#searchFormContainer button {
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #007bff;
+}
+
+#medicalRecordsDisplay {
+  margin-top: 20px;
+}
+
+/* CSS for section containers */
+.section-container {
+  display: flex; /* Use flexbox to align sections */
+  flex-wrap: wrap; /* Allow wrapping of sections to handle smaller screens */
+}
+
+/* Individual section styles */
+.section {
+  flex: 1; /* Each section takes up equal space */
+  margin-right: 20px; /* Add spacing between sections */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .section {
+      flex-basis: 100%; /* Make sections take up full width on smaller screens */
+      margin-right: 0; /* Remove margin between sections */
+      margin-bottom: 20px; /* Add margin at the bottom of each section */
+  }
+}      .raw-section {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+   flex-basis: 100%; 
+}
+
+.form-section {
+  flex: 0 0 48%;
+  padding: 20px; /* Adjust padding as needed */
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.form-section h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.form-section input[type="text"],
+.form-section input[type="password"],
+.form-section button {
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #90cbd3;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-section input[type="text"],
+.form-section input[type="password"] {
+  width: calc(100% - 24px);
+}
+
+.form-section button:hover {
+  background-color: #b6b9c4; /* Corrected color */
+}
+
+.form-section label {
+  color: #555;
+}
+/* Style for the medicine table */
+#medicineTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#medicineTable th, #medicineTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+#medicineTable th {
+  background-color: #f2f2f2;
+}
+
+#medicineTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#medicineTable tr:hover {
+  background-color: #ddd;
+}
+
+#medicineTable input[type="number"] {
+  width: 60px;
+}
+
+#medicineTable button {
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#medicineTable button:hover {
+  background-color: #457fa0;
+}
+#addForm {
+  margin-bottom: 20px;
+}
+
+#addForm label {
+  font-weight: bold;
+}
+
+#notice_heading,
+#notice_details {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#noticeTable {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#noticeTable th, #noticeTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+#noticeTable th {
+  background-color: #007bff; /* Blue header background */
+  color: #fff; /* White text color */
+}
+#addForm input[type="submit"] {
+  background-color: #007bff; /* Blue button background */
+  color: #fff; /* White text color */
+  padding: 10px 20px; /* Padding */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Cursor style */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+#addForm input[type="submit"]:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+#noticeTable .deleteBtn {
+  background-color: #4bd969; /* Red button background */
+  color: #fff; /* White text color */
+  padding: 6px 12px; /* Padding */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Cursor style */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+#noticeTable .deleteBtn:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+
+/* Form styles */
+#addForm {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+input[type="file"] {
+  margin-bottom: 20px;
+}
+
+
+
+/* Post list styles */
+#postList {
+  margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#postList th,
+#postList td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#postList th {
+  background-color: #1473d8;
+  text-align: left;
+}
+
+#postList tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#postList tr:hover {
+  background-color: #ddd;
+}
+#toggleButton {
+  background-color: #272582; /* Light blue */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #fff; /* White text color */
+  font-size: 16px;
+}
+
+#toggleButton:hover {
+  background-color: #6562e3; /* Lighter shade of blue on hover */
+}
+#ambulanceListContainer {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+/* Ambulance list item styling can be added here if needed */
+
+/* Style for the button */
+#addAmbulanceForm input[type="submit"] {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Button hover effect */
+#addAmbulanceForm input[type="submit"]:hover {
+  background-color: #3e678e; /* Darker green */
+}

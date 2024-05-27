@@ -1,0 +1,598 @@
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Add vertical scrolling if content overflows */
+  max-height: 600px; /* Limit the height to prevent excessive scrolling */
+}
+
+
+h1, h2 {
+  color: #007bff;
+}
+
+.functions {
+  margin-bottom: 20px;
+}
+
+.functions button, .functions a {
+  display: inline-block;
+  padding: 8px 16px;
+  margin-right: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.functions button:hover, .functions a:hover {
+  background-color: #00b38f;
+}
+
+/* Profile form */
+#profileForm {
+  margin-top: 20px;
+}
+
+#profileForm label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+#profileForm input[type="text"],
+#profileForm input[type="time"],
+#profileForm select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#profileForm button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#profileForm button:hover {
+  background-color: #218838;
+}
+
+.hidden {
+  display: none;
+}
+
+
+.section {
+  flex: 1 1 calc(33.33% - 20px);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px; /* Add margin */
+}
+
+.section button {
+  padding: 12px 24px;
+  background-color: #007bff; /* Button color */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.section button:hover {
+  background-color: #0056b3; /* Button color on hover */
+}
+
+
+body {
+background: #89909f;
+padding: 3rem 0 0 3rem;
+font-size: 12px;
+height: 100vh;
+margin: 0;
+overflow: hidden;
+}
+
+.site-wrap {
+display: grid;
+grid-template-columns: 280px 1fr;
+}
+
+.site-nav {
+background: #0b121b;
+color: white;
+border-top-left-radius: 2rem;
+display: flex;
+flex-direction: column;
+
+a {
+  color: inherit;
+}
+
+ul {
+  margin-bottom: auto;
+  li {
+    a {
+      display: block;
+      padding: 0.75rem 0.5rem 0.75rem 2rem;
+      position: relative;
+      &:hover,
+      &:focus {
+        color: #4371c5;
+      }
+    }
+    &.active > a {
+      background: linear-gradient(to right, #101b2d, transparent);
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        background: #4676cd;
+        width: 5px;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+      }
+    }
+  }
+  ul {
+    padding-left: 1rem;
+    margin-bottom: 0.5rem;
+    a {
+      padding-top: 0.4rem;
+      padding-bottom: 0.4rem;
+    }
+  }
+}
+}
+
+.note {
+width: calc(100% - 6rem);
+margin: 2rem;
+background: #171c26;
+border-radius: 10px;
+padding: 1rem;
+h3 {
+  font-size: 0.9rem;
+  margin: 0 0 0.4rem 0;
+}
+p {
+  color: #717783;
+}
+}
+
+.name {
+font-size: 1.3rem;
+position: relative;
+margin: 2rem 0 2rem 0;
+padding: 0 2.5rem 0.5rem 2rem;
+width: calc(100% - 3rem);
+svg {
+  position: absolute;
+  fill: white;
+  width: 16px;
+  height: 16px;
+  right: 0;
+  top: 7px;
+}
+&::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #4777ce;
+  border-radius: 20px;
+  position: absolute;
+  top: 6px;
+  right: -2px;
+}
+}
+
+main {
+border-top-left-radius: 2rem;
+background: #ebecee;
+margin-left: -2rem;
+position: relative;
+> header {
+  padding: 3rem 3rem 0 3rem;
+}
+}
+
+.content-columns {
+padding: 3rem;
+display: flex;
+background: #e5e5e9;
+.col {
+  min-height: 500px;
+  width: 200px;
+  padding: 1rem;
+  background: #ebecee;
+  margin-right: 1rem;
+  box-shadow: 0 0 5px rgba(black, 0.04);
+  border-radius: 5px;
+  &:nth-child(1) {
+    border-top: 4px solid #50aaee;
+  }
+  &:nth-child(2) {
+    border-top: 4px solid #d56ec7;
+  }
+  &:nth-child(3) {
+    border-top: 4px solid #e37e55;
+  }
+  &:nth-child(4) {
+    border-top: 4px solid #ebbd41;
+  }
+}
+}
+
+.item {
+background: white;
+box-shadow: 0 2px 4px rgba(black, 0.07);
+min-height: 50px;
+border-radius: 5px;
+margin: 0 0 0.5rem 0;
+}
+
+.nav-tabs {
+a {
+  margin-right: 2rem;
+  display: inline-block;
+  padding: 1rem 0 1rem 0;
+  font-size: 1.15rem;
+  color: #8c939e;
+  position: relative;
+  &.active {
+    color: #101620;
+    font-weight: 600;
+    span {
+      background: #d9dfea;
+      color: #5887d1;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: #457ace;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+    }
+  }
+  span {
+    border-radius: 10px;
+    font-size: 0.8rem;
+    padding: 0.25rem 0.4rem;
+    font-weight: 600;
+    vertical-align: middle;
+    position: relative;
+    top: -2px;
+    background: #dfe0e2;
+    color: #868d99;
+  }
+}
+}
+
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.toggle-switch input[type="checkbox"] {
+  display: none;
+}
+
+.toggle-switch label {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: background-color 0.4s;
+}
+
+.toggle-switch label:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.4s;
+}
+
+.toggle-switch input[type="checkbox"]:checked + label {
+  background-color: #28a745; /* Green color */
+}
+
+.toggle-switch input[type="checkbox"]:checked + label:before {
+  transform: translateX(26px);
+}
+
+
+#welcomeMessage {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  color: #1465d7;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+#welcomeMessage h1 {
+  font-size: 24px;
+  color: #1a5276; /* Dark blue */
+  font-weight: bold; 
+}
+
+#welcomeMessage p {
+  margin-bottom: 15px;
+  color: #34495e; /* Dark gray */
+}
+
+#searchFormContainer {
+  margin-top: 20px;
+}
+
+#searchFormContainer label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#searchFormContainer input[type="text"] {
+  width: 200px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+#searchFormContainer button {
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#medicalRecordsDisplay {
+  margin-top: 20px;
+}
+
+/* CSS for section containers */
+.section-container {
+  display: flex; /* Use flexbox to align sections */
+  flex-wrap: wrap; /* Allow wrapping of sections to handle smaller screens */
+}
+
+/* Individual section styles */
+.section {
+  flex: 1; /* Each section takes up equal space */
+  margin-right: 20px; /* Add spacing between sections */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .section {
+      flex-basis: 100%; /* Make sections take up full width on smaller screens */
+      margin-right: 0; /* Remove margin between sections */
+      margin-bottom: 20px; /* Add margin at the bottom of each section */
+  }
+}
+
+
+    /* Style for the table */
+    #medicineTable {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+  }
+  
+  #medicineTable th, #medicineTable td {
+      border: 1px solid #1f7cc4;
+      padding: 8px;
+      text-align: left;
+  }
+  
+  #medicineTable th {
+      background-color: #7c7ca6;
+  }
+  
+  #requiredMedicineTable{      width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;  }
+    #requiredMedicineTable th {
+      background-color: #cb7979;
+
+     }
+
+    #requiredMedicineTable th,#requiredMedicineTable td {     
+            border: 1px solid #b1502a;
+      padding: 8px;
+      text-align: left; }
+  /* Style for the buttons */
+  .edit-btn, .delete-btn, .save-btn {
+      padding: 5px 10px;
+      margin-right: 5px;
+      cursor: pointer;
+      background-color: #007bff; /* Blue color for buttons */
+      color: #ffffff; /* White text color */
+      border: none;
+      border-radius: 3px;
+      transition: background-color 0.3s ease;
+  }
+  
+  .edit-btn:hover, .delete-btn:hover, .save-btn:hover {
+      background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Style for the editable cells */
+  .editable {
+      cursor: pointer;
+  }
+  
+  .editable[contenteditable="true"] {
+      background-color: #f0f0f0; /* Gray background for editable cells */
+  }
+  
+  /* Style for the input fields in the new row */
+  #newData input {
+      width: 100%;
+      padding: 5px;
+      box-sizing: border-box;
+  }
+  
+  /* Style for the insert button */
+  #insert-btn {
+      padding: 5px 10px;
+      cursor: pointer;
+      background-color: #007bff; /* Blue color for button */
+      color: #ffffff; /* White text color */
+      border: none;
+      border-radius: 3px;
+      transition: background-color 0.3s ease;
+  }
+  
+  #insert-btn:hover {
+      background-color: #0056b3; /* Darker blue on hover */
+  }
+  .show {
+    display: inline-block !important;
+}
+
+.hide {
+    display: none !important;
+}
+
+
+
+/* Hide the medicine lists by default */
+
+
+/* Style for the checkboxes */
+
+
+.MedicineList {
+  display: block; /* Show by default */
+}
+
+.toggle-checkbox {
+  margin-right: 10px;
+  position: relative;
+ 
+}
+
+
+/*mange medicine toggle style*/
+
+  /*medical approval*/
+  
+    #medicalRequestTable {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+
+    }
+
+
+    #medicalRequestTable th,
+    #medicalRequestTable td {
+        padding: 8px;
+        border: 1px solid #170685;
+        text-align: left;
+        text-size-adjust: 12px;
+    }
+
+    #medicalRequestTable th {
+        background-color: #4fabd8;
+    }
+
+    #medicalRequestTable tbody tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    #medicalRequestTable tbody tr:hover {
+        background-color: #ddd;
+    }
+
+    .approve-btn,
+    .not-approve-btn {
+        padding: 5px 10px;
+        margin: 5px;
+        border: none;
+        cursor: pointer;
+        border-radius: 3px;
+        background-color: #2078c9;
+        color: #fff;
+        font-size: 14px;
+    }
+
+    .not-approve-btn {
+        background-color: #0e5dda;
+    }
+
+    .approve-btn:hover,
+    .not-approve-btn:hover {
+        background-color: #383be6;
+    }
+
+    #pending {
+      display: block; /* Initially visible */
+      padding: 10px;
+      background-color: #f0f0f0; /* Light gray background */
+      border: 1px solid #ccc; /* Gray border */
+      margin-bottom: 10px; /* Add some space at the bottom */
+  }
+  
+
+
+  #medicallist {
+    margin-bottom: 20px; /* Add some spacing between elements */
+}
+
+#studentIndex {
+    margin-right: 10px; /* Add spacing between the input field and the button */
+}
+
+button {
+    padding: 8px 12px; /* Add padding to the button for better visual appearance */
+    background-color: #4c75ee; /* Green background color */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Add border radius */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #4589a0; /* Darker green background color on hover */
+}
+
+label {
+    margin-right: 10px; /* Add spacing between the label and the input field */
+}
