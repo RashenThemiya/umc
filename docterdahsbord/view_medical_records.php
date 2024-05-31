@@ -12,23 +12,25 @@ if (!isset($_SESSION['username'])) {
 }
 
 // Check if student index number is provided in the URL
-if(isset($_GET['studentId'])) {
-    $studentId = $_GET['studentId'];
+
+if (isset($_GET['studentId'])) {
+    // Sanitize the input to prevent SQL injection
+    $studentId = mysqli_real_escape_string($conn, $_GET['studentId']);
 
     // Fetch medical records of the student based on their index number
-    $query = "SELECT sr.*, smr.medical_history, smr.last_updated, YEAR(CURRENT_DATE()) - YEAR(sr.birth_date) - (DATE_FORMAT(CURRENT_DATE(), '%m%d') < DATE_FORMAT(sr.birth_date, '%m%d')) AS student_age
+    $query = "SELECT sr.*, 
+                     smr.medical_history, 
+                     smr.last_updated, 
+                     YEAR(CURRENT_DATE()) - YEAR(sr.birth_date) - (DATE_FORMAT(CURRENT_DATE(), '%m%d') < DATE_FORMAT(sr.birth_date, '%m%d')) AS student_age
               FROM student_record sr 
               LEFT JOIN student_medical_records smr ON sr.student_index = smr.student_index
-              WHERE sr.student_index = ?";
-    $stmt = $conn->prepare($query);
-    $stmt->bind_param('i', $studentId);
-    $stmt->execute();
-    $result = $stmt->get_result();
+              WHERE sr.student_index = '$studentId'";
+    $result = mysqli_query($conn, $query);
 
     // Check if any records found
-    if ($result->num_rows > 0) {
+    if (mysqli_num_rows($result) > 0) {
         // Display student information
-        $row = $result->fetch_assoc();
+        $row = mysqli_fetch_assoc($result);
         echo "<div class='section-container'>"; // Parent div for all sections
         
         // Medical record details section
@@ -45,32 +47,21 @@ if(isset($_GET['studentId'])) {
         echo "<p><strong>Weight:</strong> " . $row['student_weight'] . "</p>";
         echo "<p><strong>Faculty:</strong> " . $row['faculty'] . "</p>";
         echo "<p><strong>Department:</strong> " . $row['department'] . "</p>";
+        echo "<p><strong>Student ID:</strong> " . $row['student_id'] . "</p>";
+        echo "<p><strong>Student Index:</strong> " . $studentId . "</p>";
         echo "</div>"; // End of medical record details section
 
-
         // Update medical history form section
-     
-        // Assuming you have already fetched $row from the database query
-        
-        // Fetching student ID and student index from $row
-        $studentId = $row['student_id'];
-        $studentIndex = $row['student_index'];
-        
         echo "<div class='section'>";
         echo "<h3>Update Medical History</h3>";
         echo "<form action='update_medical_history.php' method='POST'>";
-        echo "<input type='hidden' name='studentId' value='" . $studentId . "'>";
-        echo "<input type='hidden' name='studentIndex' value='" . $studentIndex . "'>";
+        echo "<input type='hidden' name='studentIdd' value='" . $row['student_id'] . "'>";
+        echo "<input type='hidden' name='studentIndexx' value='" . $studentId . "'>";
         echo "<textarea name='medicalHistory' rows='4' cols='50' placeholder='Enter updated medical history...' required></textarea><br>";
         echo "<button type='submit'>Update Medical History</button>";
         echo "</form>";
         echo "</div>"; // End of update medical history form section
-        
         echo "</div>"; // Closing parent div for both rows
-       
-         // Closing parent div for both rows
-
-
         // Medical history section
         echo "<div class='section'>";
         echo "<h3>Medical History</h3>";
@@ -79,20 +70,23 @@ if(isset($_GET['studentId'])) {
         mysqli_data_seek($result, 0);
 
         // Fetch all medical history records into an array
-        $medical_history_records = $result->fetch_all(MYSQLI_ASSOC);
+        $medical_history_records = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
         // Loop through each medical record
         foreach ($medical_history_records as $record) {
-            echo "<p><strong>Medical History:</strong> " . $record['medical_history'] ."<strong> Updated:</strong> " . $record['last_updated'] . "</p>";
+            echo "<p><strong>*</strong> " . $record['medical_history'] . " <strong>Updated:</strong> " . $record['last_updated'] . "</p>";
         }
 
         echo "</div>"; // End of medical history section
+
+       
+
     } else {
         echo "No medical records found for student ID: $studentId";
     }
 
     // Close statement and database connection
-    $stmt->close();
-    $conn->close();
+    mysqli_free_result($result);
+    mysqli_close($conn);
 }
 ?>
