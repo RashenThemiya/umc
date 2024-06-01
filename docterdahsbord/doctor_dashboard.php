@@ -90,7 +90,7 @@ if (isset($_GET['notification'])) {
 
     <div class="note">
       <h3>Welcome to the  platform</h3>
-      <p>Devloped by Software Engineering Deprement Student 20/21 Batch Team number 10</p>
+      <p>Developed by Software Engineering Department Students 20/21 Batch Team number 10</p>
     </div>
 
   </nav>
