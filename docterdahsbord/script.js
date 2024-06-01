@@ -56,6 +56,7 @@ function showMedicineManagement() {
   document.getElementById('medicineManagement').classList.remove('hidden');
 }
 
+
 function hideAll() {
   var elements = document.querySelectorAll('.container > div');
   elements.forEach(function(element) {

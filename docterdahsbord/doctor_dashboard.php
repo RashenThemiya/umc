@@ -79,10 +79,11 @@ if (isset($_GET['notification'])) {
     <div class="functions ">
         <ul>
         <li><a href="#" onclick="showProfile()">Set Profile</a></li>
-        <li><a href="#" onclick="showAppointments()">View Appointments</a></li>
+        <li><a href="#" onclick="showAppointments()">Donor List</a></li>
         <li><a href="#" onclick="showMedicalRequests()">Approve Medical Requests</a></li>
         <li><a href="#" onclick="showMedicalRecords()">View Medical Records</a></li>
         <li><a href="#" onclick="showMedicineManagement()">Manage Medicines</a></li>
+        
         <li><a href="../logout.php">Logout</a></li>
         </div>
         </ul>

@@ -8,7 +8,7 @@ if (!$conn) {
 }
 
 // Prepare and execute the SQL query
-$sql = "SELECT name, email, donate_thing FROM pending_donor";
+$sql = "SELECT name, email, donate_thing FROM pending_donor WHERE status = 'completed'";
 $result = mysqli_query($conn, $sql);
 
 $donors = array();
