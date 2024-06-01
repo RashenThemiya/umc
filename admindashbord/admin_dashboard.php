@@ -23,7 +23,7 @@ $username = $_SESSION['username']; // Retrieve username from session
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doctor Dashboard</title>
+    <title>Admin Dashboard</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
         
@@ -48,7 +48,7 @@ $username = $_SESSION['username']; // Retrieve username from session
         <li><a href="#" onclick="showProfile()">Account Managment </a></li>
         <li><a href="#" onclick="showAppointments()">Medication Managment</a></li>
         <li><a href="#" onclick="showMedicalRequests()">Website Management</a></li>
-        <li><a href="#" onclick="showMedicalRecords()">Appoiment Management</a></li>
+        <li><a href="#" onclick="showMedicalRecords()">Appointment Management</a></li>
         <li><a href="#" onclick="showMedicineManagement()">Other</a></li>
         <li><a href="../logout.php">Logout</a></li>
         </div>
@@ -56,7 +56,7 @@ $username = $_SESSION['username']; // Retrieve username from session
 
     <div class="note">
       <h3>Welcome to the  platform</h3>
-      <p>Devloped by Software Engineering Deprement Student 20/21 Batch Team number 10</p>
+      <p>Developed by Software Engineering Department Students 20/21 Batch Team number 10</p>
     </div>
 
   </nav>
