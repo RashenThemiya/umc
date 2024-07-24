@@ -16,9 +16,9 @@ function sendApprovalEmail($emails, $details, $requestData) {
     $mail->Host = 'smtp.elasticemail.com';
     $mail->Port = 2525;
     $mail->SMTPAuth = true;
-    $mail->Username = 'rashenrashen4@gmail.com';
-    $mail->Password = 'F46536C149354B9F8B504BB503899A80518E';
-    $mail->setFrom('rashenrashen4@gmail.com', 'rashen themiya');
+    $mail->Username = 'the.mi.ya.9.9.r@gmail.com';
+    $mail->Password = '9F017ED8EA0976C8A8CAD5313A8771F5ABAC';
+    $mail->setFrom('the.mi.ya.9.9.r@gmail.com', 'rashen themiya');
     foreach ($emails as $email) {
         $mail->addAddress($email);
     }

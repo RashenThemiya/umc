@@ -45,7 +45,7 @@ $username = $_SESSION['username']; // Retrieve username from session
 
     <div class="functions ">
         <ul>
-        <li><a href="#" onclick="showProfile()">Account Managment </a></li>
+        <li><a href="#" onclick="showProfile()">Account Management </a></li>
         <li><a href="#" onclick="showAppointments()">Medication Managment</a></li>
         <li><a href="#" onclick="showMedicalRequests()">Website Management</a></li>
         <li><a href="#" onclick="showMedicalRecords()">Appointment Management</a></li>
