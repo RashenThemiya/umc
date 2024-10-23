@@ -16,7 +16,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: 1234  # Root password
       MYSQL_DATABASE: umc1        # Database name
-      MYSQL_USER: root            # MySQL user
+      MYSQL_USER: user            # MySQL user
       MYSQL_PASSWORD: 1234        # Password for the root user
     volumes:
       - db_data:/var/lib/mysql  # Persist MySQL data
