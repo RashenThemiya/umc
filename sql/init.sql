@@ -6,6 +6,8 @@
 -- Generation Time: May 17, 2024 at 08:37 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
+CREATE DATABASE IF NOT EXISTS umc1;
+USE umc1;
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -533,7 +535,7 @@ ALTER TABLE `student_medical_records`
 --
 ALTER TABLE `student_record`
   ADD PRIMARY KEY (`student_id`),
-  ADD UNIQUE KEY `student_index` (`student_index`) USING HASH;
+  ADD UNIQUE KEY `student_index` (`student_index`(768)) USING HASH;
 
 --
 -- Indexes for table `users`
@@ -541,7 +543,7 @@ ALTER TABLE `student_record`
 ALTER TABLE `users`
   ADD PRIMARY KEY (`user_id`),
   ADD UNIQUE KEY `username` (`username`),
-  ADD UNIQUE KEY `student_index` (`student_index`) USING HASH;
+  ADD UNIQUE KEY `student_index` (`student_index`(768)) USING HASH;
 
 --
 -- AUTO_INCREMENT for dumped tables

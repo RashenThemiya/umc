@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8080:80"  # Expose the web server on port 8080
+    volumes:
+      - .:/var/www/html  # Sync project files with the container
+    depends_on:
+      - db  # Ensure MySQL starts first
+    container_name: php_apache
+
+  db:
+    image: mysql:8.0  # Official MySQL image
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234  # Root password
+      MYSQL_DATABASE: umc1       # Database name
+      MYSQL_USER: root           # MySQL user (same as in PHP code)
+      MYSQL_PASSWORD: 1234       # User password
+    volumes:
+      - db_data:/var/lib/mysql  # Persist MySQL data
+      - ./sql:/docker-entrypoint-initdb.d  # Optional SQL init scripts
+    ports:
+      - "3307:3306"  # Expose MySQL on port 3306
+    container_name: mysql_db
+
+volumes:
+  db_data:

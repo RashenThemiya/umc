@@ -12,13 +12,13 @@ require '../vendor/autoload.php';
 function sendApprovalEmail($emails, $details, $requestData) {
     $mail = new PHPMailer;
     $mail->isSMTP();
-    // Configure SMTP settings
-    $mail->Host = 'smtp.elasticemail.com';
-    $mail->Port = 2525;
+    $mail->Host = 'smtp.gmail.com';
+    $mail->Port = 465;
     $mail->SMTPAuth = true;
-    $mail->Username = 'the.mi.ya.9.9.r@gmail.com';
-    $mail->Password = '9F017ED8EA0976C8A8CAD5313A8771F5ABAC';
-    $mail->setFrom('the.mi.ya.9.9.r@gmail.com', 'rashen themiya');
+    $mail->Username = 'rashenrashen4@gmail.com'; // Directly assigning email
+    $mail->Password = 'rrkvrrnlrjywpduz'; 
+    $mail->SMTPSecure = 'ssl';
+    $mail->setFrom('rashenrashen4@gmail.com', 'rashen themiya');
     foreach ($emails as $email) {
         $mail->addAddress($email);
     }
